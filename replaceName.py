@@ -1,3 +1,4 @@
+# 翻译艾丝蒂尔线时写的简单脚本
 # 定义原版txt和翻译后txt文件
 original_file = r'D:\MyTools\temp\yak11030.txt'
 translated_file = r'D:\MyTools\temp\yak11030_translated.txt'
