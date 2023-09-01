@@ -1,3 +1,4 @@
+# 该题目用到了IEEE754浮点数中NaN的性质
 import random
 random = random.SystemRandom()
 print(random)
