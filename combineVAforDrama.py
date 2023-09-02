@@ -9,10 +9,11 @@ dirs=os.listdir(path)
 for dir in dirs:
     dirpath=os.path.join(path,dir)
     files=os.listdir(dirpath)
-    filepaths=[] # 用来存放要操作的文件的完整文件路径
-    commend = 'ffmpeg.exe'  # 要执行的命令的字符串
-    for j in range(len(files),step=2):
-        videoname=str(j/2-1)
+    # 要求音视频文件名前缀相同，确保能排列在一起
+    for j in range(0,len(files),2):
+        filepaths = []  # 用来存放要操作的文件的完整文件路径
+        commend = 'ffmpeg.exe'  # 要执行的命令的字符串
+        videoname=os.path.join(dirpath,str(int(j/2+1))) # 集数不准确，需要手动命名
         filepaths.append(os.path.join(dirpath,files[j]))
         filepaths.append(os.path.join(dirpath,files[j+1]))
         print(filepaths)
@@ -27,4 +28,4 @@ for dir in dirs:
                 os.remove(i)
 
     #os.system(ffmpeg)
-print('Succeed!')
+print('Done!')

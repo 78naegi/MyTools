@@ -30,4 +30,4 @@ for dir in dirs:
         for i in filepaths:
             os.remove(i)
     #os.system(ffmpeg)
-print('Succeed!')
+print('Done!')
