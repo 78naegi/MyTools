@@ -13,7 +13,7 @@ for dir in dirs:
     for j in range(0,len(files),2):
         filepaths = []  # 用来存放要操作的文件的完整文件路径
         commend = 'ffmpeg.exe'  # 要执行的命令的字符串
-        videoname=os.path.join(dirpath,str(int(j/2+1))) # 集数不准确，需要手动命名
+        videoname=os.path.join(dirpath,str(int(j/2+1))) # 集数不准确，需要之后手动命名
         filepaths.append(os.path.join(dirpath,files[j]))
         filepaths.append(os.path.join(dirpath,files[j+1]))
         print(filepaths)
